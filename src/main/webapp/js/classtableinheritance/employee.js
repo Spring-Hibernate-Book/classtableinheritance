@@ -27,7 +27,7 @@ function create(){
 		formData={"type":"contractorEmployee","name":name,"hourlyRate":employeeFirstProperty,"overtimeRate":employeeSecondProperty};
 	}
 	$.ajax({
-		url : "/Spring-OODD/classtableinheritance/create",
+		url : "/classtableinheritance/create",
 		type: "POST",
 		data : JSON.stringify(formData),
 		beforeSend: function(xhr) {
@@ -67,7 +67,7 @@ function update(){
 	}
 	
 	$.ajax({
-		url : "/Spring-OODD/classtableinheritance/edit",
+		url : "/classtableinheritance/edit",
 		type: "POST",
 		data : JSON.stringify(formData),
 		beforeSend: function(xhr) {
@@ -95,7 +95,7 @@ function update(){
 }
 function loadObjects(){
 	$.ajax({
-		url : "/Spring-OODD/classtableinheritance/findAll",
+		url : "/classtableinheritance/findAll",
 		type: "GET",
 		data : {},
 		dataType: "json",
@@ -116,7 +116,7 @@ function loadObjects(){
 }
 function deleteObject(employeeid){
 	var employeeForm={id:employeeid};
-	var delurl="/Spring-OODD/classtableinheritance/remove/"+employeeid;
+	var delurl="/classtableinheritance/remove/"+employeeid;
 	$.ajax({
 		url : delurl,
 		type: "POST",
@@ -133,7 +133,7 @@ function deleteObject(employeeid){
 	});
 }
 function editObject(employeeid){
-	var editurl="/Spring-OODD/classtableinheritance/findById/"+employeeid;
+	var editurl="/classtableinheritance/findById/"+employeeid;
 	var employeeForm={id:employeeid};
 	$.ajax({
 		url : editurl,

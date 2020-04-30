@@ -6,5 +6,7 @@
     <session-factory>
     	<property name="show_sql">true</property>
         <mapping class="com.oodd.spring.classtableinheritance.entity.Employee" />
+        <mapping class="com.oodd.spring.classtableinheritance.entity.PermanentEmployee" />
+        <mapping class="com.oodd.spring.classtableinheritance.entity.ContractorEmployee" />
     </session-factory>
 </hibernate-configuration>
